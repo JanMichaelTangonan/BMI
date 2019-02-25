@@ -7,23 +7,27 @@ public class BMI {
         Scanner sc = new Scanner(System.in);
 
         //Initializing Variables
-        double foot,inch,kilograms,bmi;
+        double heightInFeet,heightInInches,weightInKilograms,height,weight,bmi;
 
         //Declaring Variables
-        foot = 12 ;
-        inch = 0.0833333;
-        kilograms = 2.20462;
-        bmi = ((kilograms/foot*foot));
+        heightInFeet = sc.nextDouble() *12;
+        heightInInches = sc.nextDouble() + heightInFeet*12;
+        weightInKilograms = 2.205;
+
+        //Calculations
+        height = heightInFeet + heightInInches;
+        weight = weightInKilograms;
+        bmi = weightInKilograms/heightInFeet*heightInInches;
 
         //Users input
         System.out.println("What is your height in feet?");
-        foot = sc.nextDouble();
+        height = sc.nextDouble();
 
         System.out.println("What is your height in inches?");
-        inch = sc.nextDouble();
+        height = sc.nextDouble();
 
         System.out.println("What is your weight in pounds?");
-        kilograms = sc.nextDouble();
+        weight = sc.nextDouble();
 
         //Showing the user's BMI
         System.out.println("Your BMI is" + bmi);
