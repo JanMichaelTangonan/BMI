@@ -9,25 +9,21 @@ public class BMI {
         //Initializing Variables
         double heightInFeet,heightInInches,weightInKilograms,height,weight,bmi;
 
-        //Declaring Variables
-        heightInFeet = sc.nextDouble() *12;
-        heightInInches = sc.nextDouble() + heightInFeet*12;
-        weightInKilograms = 2.205;
-
-        //Calculations
-        height = heightInFeet + heightInInches;
-        weight = weightInKilograms;
-        bmi = weightInKilograms/heightInFeet*heightInInches;
-
         //Users input
         System.out.println("What is your height in feet?");
-        height = sc.nextDouble();
+        heightInFeet = sc.nextDouble() * 12 ;
 
         System.out.println("What is your height in inches?");
-        height = sc.nextDouble();
+        heightInInches = sc.nextDouble() + heightInFeet*12;
+        height = heightInInches;
 
         System.out.println("What is your weight in pounds?");
-        weight = sc.nextDouble();
+        weightInKilograms = sc.nextDouble()*0.453592;
+
+        //Calculations
+        height = heightInFeet;
+        weight = weightInKilograms;
+        bmi = weightInKilograms/(height * height);
 
         //Showing the user's BMI
         System.out.println("Your BMI is" + bmi);
