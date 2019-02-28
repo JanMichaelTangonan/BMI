@@ -7,7 +7,7 @@ public class BMI {
         Scanner sc = new Scanner(System.in);
 
         //Initializing Variables
-        double heightInFeet,heightInInches,weightInKilograms,height,weight,bmi;
+        double heightInFeet,heightInInches,weightInKilograms,height,bmi;
 
         //Users input
         System.out.println("What is your height in feet?");
